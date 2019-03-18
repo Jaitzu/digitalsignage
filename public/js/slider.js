@@ -7,7 +7,7 @@ let bussi = document.getElementById('bussiLista');
 let img = document.getElementById('ilmoitus');
 
 let hidePolja = () =>{
-    metropolja.style.backgroundImage="url('kuva.jpg')";
+    metropolja.style.backgroundImage="url('img/kuva.jpg')";
     metropolja.style.backgroundSize ='cover';
     saa.style.display='block';
     console.log('hidepolja');
@@ -23,14 +23,14 @@ let showFood = () =>{
 
 let showPolja = () =>{
     metropolja.style.backgroundSize ='contain';
-    metropolja.style.backgroundImage="url('Metropolia_RGB_A.png')";
+    metropolja.style.backgroundImage="url('img/Metropolia_RGB_A.png')";
     console.log('showpolja');
     img.style.display='none';
 };
 
 let hideFood_showBussi = () =>{
-    metropolja.style.backgroundImage="url('none')";
-    metropolja.style.backgroundColor='black';
+    metropolja.style.backgroundImage="url('img/hsl.png')";
+    metropolja.style.backgroundSize='contain';
    lista.style.display='none';
    title.style.display='none';
    video.style.display='none';
@@ -42,6 +42,8 @@ let hideFood_showBussi = () =>{
 let showIlm_hidebussi= () =>{
     bussi.style.display='none';
     img.style.display='block';
+    metropolja.style.backgroundImage="url('none')";
+    metropolja.style.backgroundColor='black';
 };
 
 let i = 0;

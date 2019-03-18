@@ -15,13 +15,14 @@ body{
     align-content: center;
     justify-content: center;
     flex-wrap: wrap;
-    background-image: url("Metropolia_RGB_A.png");
+    background-image: url("img/Metropolia_RGB_A.png");
     background-repeat: no-repeat;
     -webkit-background-size: contain;
     -moz-background-size: contain;
     -o-background-size: contain;
     background-size: contain;
     background-color: black;
+    background-position: center;
 }
 
 p{
@@ -30,30 +31,52 @@ p{
     font-family: "Arial Black";
 
 }
-
 h1{
-    color:white;
-    border: solid;
-    border-color: black;
-    background-color: rgba(0,0,0,0.5);
-    align-self: center;
-    font-family: "Arial Black";
-    padding: 1%;
-    display: none;
+    color: white;
+    font-size: 30px;
 }
+
+@media screen and (max-width: 1920px) {
+    h1 {
+        font-size: 24px ;
+    }
+}
+
+@media screen and (max-width: 1920px) {
+    .li {
+        font-size: 24px ;
+    }
+}
+
+@media screen and (min-width: 1925px) {
+    .li {
+        font-size: 30px ;
+    }
+}
+
 
 /*ruokalista*/
 #lista{
     background-color: rgba(0,0,0,0.5);
     padding: 2ex;
     max-height: 80%;
-    border: solid;
     display: none;
     overflow: hidden;
+    border-radius: 25px;
 
 }
 
+#ruo{
+    color:white;
+    border-color: black;
+    background-color: rgba(0,0,0,0.5);
+    align-self: center;
+    font-family: "Arial Black";
+    padding: 1%;
+    display: none;
+    border-radius: 25px;
 
+}
 
 video{
     position: fixed;
@@ -67,10 +90,10 @@ video{
 }
 
 .li{
-    font-size: 30px;
     overflow: hidden;
     margin: 20px;
     border-bottom: groove;
+    border-color: rgba(0,0,0,0.5);
 }
 
 
@@ -84,12 +107,14 @@ video{
     margin:25vh auto;
     box-shadow: 0 20px 40px 0px rgba(0,0,0,0.3);
     display:none;
+    border-radius: 7%;
+    background-color: rgba(0,0,0,0.5);
 }
 
 #temp, #humidity-div {
     font-family: "Arial Black";
     font-weight: bold;
-    font-size: 50px;
+    font-size: 55px;
     color: #fff;
     position: absolute;
     left: 50%;
@@ -101,6 +126,7 @@ video{
     flex-direction: column;
     align-content: center;
     justify-content: center;
+    text-align: center;
 
 }
 
@@ -111,7 +137,7 @@ video{
 
 #city-name {
     font-family: "Arial Black";
-    font-size: 40px;
+    font-size: 55px;
     font-weight: bold;
     color: #fff;
 }
@@ -129,7 +155,6 @@ video{
 }
 
 .city-icon {
-    background-color: rgba(0,0,0,0.5);
     height: 100%;
     position: relative;
     display: flex;
@@ -139,12 +164,11 @@ video{
 
 .temperature {
     position: relative;
-    background-color: rgba(0,0,0,0.5);
+
 }
 
 .humidity {
     position: relative;
-    background-color: rgba(0,0,0,0.5);
 }
 #tempHum{
     display: grid;
@@ -158,8 +182,9 @@ video{
     display: none;
     max-height: 90%;
     border-radius: 25px;
-    background-color: blue;
+    background-color: rgba(105,105,105,0.8);
     overflow: hidden;
+    box-shadow: 0 20px 80px 0px rgba(0,0,0,0.6);
 
 
 
@@ -184,13 +209,13 @@ video{
     max-height: 100%;
     max-width: 100%;
     border-bottom: solid;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-
+    display: grid;
+    grid-template-columns: 15% 15% 15% 55%;
 
 }
-
+.ots{
+    font-weight: bold;
+}
 
 /* ilmooitus */
 #ilmoitus{
