@@ -30,7 +30,7 @@ let showPolja = () =>{
 
 let hideFood_showBussi = () =>{
     metropolja.style.backgroundImage="url('none')";
-    metropolja.style.backgroundColor='darkblue';
+    metropolja.style.backgroundColor='black';
    lista.style.display='none';
    title.style.display='none';
    video.style.display='none';
@@ -42,7 +42,6 @@ let hideFood_showBussi = () =>{
 let showIlm_hidebussi= () =>{
     bussi.style.display='none';
     img.style.display='block';
-    metropolja.style.backgroundColor='black';
 };
 
 let i = 0;

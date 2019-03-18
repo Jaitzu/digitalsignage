@@ -10,13 +10,26 @@ fetch("../aikataulu.json", {mode: 'cors'}).then((response) =>{
   let aikatauluLista = document.querySelector("#bussiLista");
     aikatauluLista.innerHTML='';
 
-    const otsikkoKotelo = document.createElement('div');
-    otsikkoKotelo.setAttribute('id', 'koteloo');
-    const otsikko = document.createElement("p");
+
+    const otsikko = document.createElement("div");
     otsikko.setAttribute('id', 'otsikko');
-    aikatauluLista.appendChild(otsikkoKotelo);
-    otsikkoKotelo.appendChild(otsikko);
-    otsikko.innerHTML = " " + "Pysäkki" + "   |    " + "Lähtee"   + "   |  " + "Linja" + "    |    " + "Määränpää";
+    aikatauluLista.appendChild(otsikko);
+    const pysakki = document.createElement('div');
+    pysakki.setAttribute('class', 'ots');
+    const lahtee = document.createElement('ots');
+    lahtee.setAttribute('class', 'ots');
+    const linja= document.createElement('div');
+    linja.setAttribute('class', 'ots');
+    const reitti = document.createElement('div');
+    reitti.setAttribute('class', 'ots');
+   otsikko.appendChild(pysakki);
+   otsikko.appendChild(lahtee);
+    otsikko.appendChild(linja);
+    otsikko.appendChild(reitti);
+    pysakki.innerHTML = '<h1>' + 'Pysäkki' + '</h1>';
+    lahtee.innerHTML = '<h1>' + 'Lähtee' + '</h1>';
+    linja.innerHTML = '<h1>' + "Linja" + '</h1>';
+    reitti.innerHTML = '<h1>' + "Reitti" + '</h1>';
 
     for(let i=0; i<jsonFile.data.stops.length; i++) {
         const kotelo = document.createElement('div');
